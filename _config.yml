@@ -1,0 +1,159 @@
+############################
+# --- Required options --- #
+############################
+
+title: Las chorradas de Juanjo
+author: Juanjo Requena
+
+# Final URL of the blog. baseurl is injected by the GitHub Pages workflow
+# ("" with the custom domain, "/blog" when served from wuaho.github.io/blog).
+url: "https://blog.juanjorequena.com"
+baseurl: ""
+
+language: es
+locale: es
+
+###############################################
+# --- List of links in the navigation bar --- #
+###############################################
+
+navbar-links:
+  Sobre mí: "me/"
+  Archivo: "archive/"
+  Etiquetas: "tags/"
+  juanjorequena.com: "https://juanjorequena.com"
+
+################
+# --- Logo --- #
+################
+
+avatar: "/assets/img/avatar.png"
+round-avatar: true
+
+#####################################
+# --- Footer social media links --- #
+#####################################
+
+social-network-links:
+  rss: true
+  github: wuaho
+  linkedin: juanjorequena
+
+rss-description: Unas veces hablo de ingeniería de software, otras de los libros que leo o apuntes míos. Básicamente, intento explicarme a mí mismo cómo funciona el mundo del software sin que me explote la cabeza.
+
+###########################
+# --- General options --- #
+###########################
+
+share-links-active:
+  twitter: true
+  facebook: false
+  linkedin: true
+  vk: false
+  reddit: false
+
+url-pretty: "blog.juanjorequena.com"
+title-on-all-pages: true
+excerpt_length: 50
+feed_show_excerpt: true
+feed_show_tags: true
+post_search: true
+edit_page_button: false
+navbar-var-length: false
+
+keywords: "ingeniería de software,backend,bases de datos,sistemas distribuidos,libros"
+
+######################################
+# --- Colours / background image --- #
+######################################
+
+page-col: "#FFFFFF"
+text-col: "#404040"
+link-col: "#008AFF"
+hover-col: "#0085A1"
+navbar-col: "#EAEAEA"
+navbar-text-col: "#404040"
+navbar-border-col: "#DDDDDD"
+footer-col: "#EAEAEA"
+footer-text-col: "#777777"
+footer-link-col: "#404040"
+footer-hover-col: "#0085A1"
+
+site-css:
+  - "/assets/css/custom.css"
+
+#################################
+# --- Web Analytics Section --- #
+#################################
+
+# Cloudflare Web Analytics (free, no cookies): paste the beacon token here
+#cloudflare_analytics: ""
+
+####################
+# --- Comments --- #
+####################
+
+# giscus (comments stored in GitHub Discussions of this repo). To enable:
+# 1) enable Discussions in the repo, 2) install https://github.com/apps/giscus,
+# 3) get the ids from https://giscus.app and uncomment this block.
+#giscus:
+#  hostname: giscus.app
+#  repository: wuaho/blog
+#  repository-id:
+#  category: Announcements
+#  category-id:
+#  mapping: pathname
+#  reactions-enabled: 1
+#  emit-metadata: 0
+#  theme: light
+
+################
+# --- Misc --- #
+################
+
+date_format: "%d/%m/%Y"
+
+#################################################################################
+# --- Build options --- #
+#################################################################################
+
+theme: beautiful-jekyll-theme
+
+timezone: "Europe/Madrid"
+markdown: kramdown
+highlighter: rouge
+# Same URLs as the old Hashnode blog: /<slug>/
+permalink: /:title/
+paginate: 5
+paginate_path: "/page:num/"
+
+kramdown:
+  input: GFM
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true
+      social-share: true
+      readtime: true
+  -
+    scope:
+      path: ""
+    values:
+      layout: "page"
+
+exclude:
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor/
+  - .bundle/
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap

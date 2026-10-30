@@ -1,0 +1,26 @@
+---
+layout: page
+title: Archivo
+permalink: /archive/
+---
+
+{% assign date_format = site.date_format | default: "%d/%m/%Y" %}
+
+<div id="full-tags-list">
+{%- for post in site.posts -%}
+  {%- assign year = post.date | date: "%Y" -%}
+  {%- if year != current_year -%}
+    {%- unless forloop.first -%}</div>{%- endunless -%}
+    <h2 id="{{ year }}" class="linked-section">{{ year }}</h2>
+    <div class="post-list">
+    {%- assign current_year = year -%}
+  {%- endif -%}
+    <div class="tag-entry">
+      <a href="{{ post.url | relative_url }}">{{- post.title | strip_html -}}</a>
+      <div class="entry-date">
+        <time datetime="{{- post.date | date_to_xmlschema -}}">{{- post.date | date: date_format -}}</time>
+      </div>
+    </div>
+  {%- if forloop.last -%}</div>{%- endif -%}
+{%- endfor -%}
+</div>

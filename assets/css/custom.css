@@ -1,0 +1,46 @@
+/* Callouts migrated from Hashnode */
+.callout {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid #008AFF;
+  border-radius: 6px;
+  background: #F2F8FF;
+}
+
+.callout-emoji {
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+.callout-text {
+  flex: 1;
+}
+
+mark {
+  background: #FFF3A3;
+  padding: 0 0.15em;
+}
+
+.blog-post img {
+  display: block;
+  margin: 1.5rem auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.blog-post table {
+  display: block;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.post-cover {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 0 2rem;
+  border-radius: 6px;
+}
