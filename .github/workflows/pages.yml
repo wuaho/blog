@@ -18,13 +18,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: "4.0"
           bundler-cache: true
       - id: pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
       # The theme builds absolute URLs, so point url/baseurl at wherever Pages serves the site:
       # https://blog.juanjorequena.com once the custom domain is set, https://wuaho.github.io/blog before.
       - run: |
@@ -32,7 +32,7 @@ jobs:
           bundle exec jekyll build --config _config.yml,_config.pages.yml --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
 
   deploy:
     needs: build
@@ -42,4 +42,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
