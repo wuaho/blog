@@ -27,9 +27,8 @@ navbar-links:
 # --- Logo --- #
 ################
 
-# Icono del nav desactivado; descomentar para volver a mostrarlo
-# avatar: "/assets/img/avatar.png"
-# round-avatar: true
+avatar: "/assets/img/avatar.png"
+round-avatar: true
 
 #####################################
 # --- Footer social media links --- #
