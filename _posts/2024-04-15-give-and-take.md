@@ -1,14 +1,18 @@
 ---
-title: "Success through giving: lessons from \"Give and Take\""
+title: 'Success through giving: lessons from "Give and Take"'
 date: "2024-04-15 20:51:46 +0200"
 tags: ["libros"]
+show-preview: true
 thumbnail-img: "/assets/img/posts/give-and-take/cover.jpeg"
 share-img: "/assets/img/posts/give-and-take/cover.jpeg"
 share-description: "Why did I read this book?\nRecently, my mentor in employment and work culture in Korea, Minhee Jung, recommended this book to me to better understand the ways in which we can make connections. At first, I was not sure if the content of the book would ..."
 ---
+
+<img src="{{ '/assets/img/posts/give-and-take/cover.jpeg' | relative_url }}" alt="Dos manos acercándose para ayudarse" style="max-width: 100%;">
+
 ## Why did I read this book?
 
-Recently, my mentor in employment and work culture in Korea, [*Minhee Jung*](https://www.linkedin.com/in/minheejung), recommended this book to me to better understand the ways in which we can make connections. At first, I was not sure if the content of the book would clash too much with my way of thinking.
+Recently, my mentor in employment and work culture in Korea, [_Minhee Jung_](https://www.linkedin.com/in/minheejung), recommended this book to me to better understand the ways in which we can make connections. At first, I was not sure if the content of the book would clash too much with my way of thinking.
 
 I come from a Spanish family where Christian values such as generosity are implicit in my culture. This, combined with a strong sense of helping others passed on to me by my parents, fueled my childhood dream of becoming a policeman, and later, a fireman. However, my aspirations changed and ended up changing my dreams again to become a software engineer. I believe that my life experiences have shaped my perspective, and sometimes restrained my ability to fully embody those giving values.
 
@@ -27,8 +31,6 @@ The main argument in the book is that in a networked world success depends on ho
 > "I'll sum up the key to success in one word: **generosity**," writes Keith Ferrazzi. "If your interactions are ruled by generosity, your rewards will follow suit."
 
 The main quality of givers that is described through the read of the whole book is **generosity.** This is the main characteristic of givers that make them what they are, being free in giving or sharing.
-
-<img src="{{ '/assets/img/posts/give-and-take/cover.jpeg' | relative_url }}" alt="Dos manos acercándose para ayudarse" style="max-width: 60%;">
 
 > Instead of aiming to succeed first and give back later, you might decide that giving first is a promising path to succeeding later.
 
@@ -91,7 +93,7 @@ This is the 5-minute rule. Is not about thinking about what the other person can
 ### Weak ties and dormant ties
 
 > One of Rifkin's maxims is "I believe in the strength of weak ties"
-> 
+>
 > Strong ties are our close friends and colleagues, the people we really trust. Weak tries are our acquaintances, the people we know casually.
 
 **Strong ties** are people who are close to you and somehow share the same social circles. Since **weak ties** are often formed by people who are not close to you, these people get you to know others from different circles that you wouldn't be able to get to to know. For instance; to land a new employment, weak ties are more likely to help you get there than strong ties with people you know better.
@@ -123,7 +125,7 @@ Successful givers need to know who's likely to manipulate them so that they can 
 > The most effective negotiators were otherish: they reported high concern for their own interests and high concern for their counterparts' interests.
 
 > The dangers lie less in giving itself, and more in the rigidity of sticking with a single reciprocity style across all interactions and relationships.
-> 
+>
 > ... Although many successful givers start from the default of trusting others' intentions, they're also careful to scan their environments to screen for potential takers, always ready to shift from feeling a taker's emotions to analyzing a taker's thoughts, and flex from giving unconditionally to a more measured approach of generous tit for that. And when they feel inclined to back down, successful givers are prepared to draw reserves of assertiveness from their commitments to the people who matter to them.
 
 As a giver, you can't act the same way with all people. Givers need to change their strategies so they are not used by others. They need to recognize takers and change their strategy.
