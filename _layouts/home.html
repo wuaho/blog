@@ -10,7 +10,7 @@ layout: page
 <ul class="posts-list list-unstyled" role="list">
   {% for post in posts %}
   <li class="post-preview">
-    <article>
+    <article{% if post.show-preview and post.thumbnail-img %} class="has-preview"{% endif %}>
 
       {%- comment -%} Banner solo en los posts con `show-preview: true` {%- endcomment -%}
       {% if post.show-preview and post.thumbnail-img %}

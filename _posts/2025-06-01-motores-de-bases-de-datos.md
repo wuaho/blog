@@ -2,6 +2,7 @@
 title: "Motores de bases de datos: OLTP vs OLAP"
 date: "2025-06-01 05:41:33 +0200"
 tags: ["bases de datos"]
+show-preview: true
 thumbnail-img: "/assets/img/posts/motores-de-bases-de-datos/cover.jpg"
 share-img: "/assets/img/posts/motores-de-bases-de-datos/cover.jpg"
 share-description: "Vamos a hablar de algo un poco más amplio: los motores de bases datos. Los podemos dividir en dos grandes categorías: OLTP y OLAP."

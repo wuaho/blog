@@ -2,6 +2,7 @@
 title: "Hacer software es como…  Lecciones de 'Code That Fits In Your Head'"
 date: "2026-01-11 15:29:19 +0100"
 tags: ["ingeniería de software", "libros"]
+show-preview: true
 thumbnail-img: "/assets/img/posts/code-that-fits-in-your-head/cover.jpeg"
 share-img: "/assets/img/posts/code-that-fits-in-your-head/cover.jpeg"
 share-description: '¿Puede tu código caber en tu cabeza? Mis notas sobre "Code That Fits in Your Head": por qué el software no es como construir una casa ni cuidar un jardín'

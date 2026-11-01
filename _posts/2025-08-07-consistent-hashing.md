@@ -3,6 +3,7 @@ title: "¿Qué es Consistent Hashing?"
 subtitle: "La técnica que utilizan Cassandra y DynamoDB para rebalancear datos en sistemas distribuidos"
 date: "2025-08-07 07:55:46 +0200"
 tags: ["sistemas distribuidos"]
+show-preview: true
 thumbnail-img: "/assets/img/posts/consistent-hashing/cover.png"
 share-img: "/assets/img/posts/consistent-hashing/cover.png"
 share-description: "Descubre el algoritmo de consistent hashing para redistribuir eficientemente la carga en sistemas distribuidos."

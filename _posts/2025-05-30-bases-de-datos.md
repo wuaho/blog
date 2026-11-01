@@ -2,6 +2,7 @@
 title: "¿Qué base de datos debería usar?"
 date: "2025-05-30 16:59:15 +0200"
 tags: ["bases de datos"]
+show-preview: true
 thumbnail-img: "/assets/img/posts/bases-de-datos/cover.jpg"
 share-img: "/assets/img/posts/bases-de-datos/cover.jpg"
 share-description: "En este post voy a comparar brevemente bases de datos relacionales y basadas en documentos (aunque también mencionaré grafos)."
