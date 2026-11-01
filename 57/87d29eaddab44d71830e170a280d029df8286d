@@ -1,0 +1,39 @@
+_layouts/home.html
+  s_6a18da6c1a47cd::t_846f758e80b494 13
+_posts/2025-08-07-consistent-hashing.md
+  s_6a18da6c1a47cd::t_fa02afae99d996 6
+_posts/2025-05-30-bases-de-datos.md
+  s_6a18da6c1a47cd::t_fa02afae99d996 5
+_posts/2025-08-21-acid.md
+  s_6a18da6c1a47cd::t_fa02afae99d996 6
+_posts/2025-08-01-cap.md
+  s_6a18da6c1a47cd::t_fa02afae99d996 5
+_posts/2026-01-11-code-that-fits-in-your-head.md
+  s_6a18da6c1a47cd::t_fa02afae99d996 5
+_posts/2025-06-01-motores-de-bases-de-datos.md
+  s_6a18da6c1a47cd::t_fa02afae99d996 5
+assets/css/custom.css
+  s_6a18da6c1a47cd::t_39c11fca911758 57,60-61,63-68,70-72,74-78,80-81
+  s_6a18da6c1a47cd::t_87c0dc76875b26 48,51,62,69,73,79
+  s_6a18da6c1a47cd::t_bd8d54e8d9dfbb 82
+_posts/2024-09-21-nosql-distilled.md
+  s_6a18da6c1a47cd::t_fa02afae99d996 5
+_posts/2024-03-28-me.md
+  s_6a18da6c1a47cd::t_fa02afae99d996 5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "5787d29eaddab44d71830e170a280d029df8286d",
+  "prompts": {},
+  "sessions": {
+    "s_6a18da6c1a47cd": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7bdf271b-69b7-4a6b-a60e-5405ec69e365",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "wuaho <juanjoserequenalama@gmail.com>"
+    }
+  }
+}
