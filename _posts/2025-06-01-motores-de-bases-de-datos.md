@@ -1,19 +1,17 @@
 ---
-title: "⚙️Motores de bases de datos: OLTP vs OLAP"
+title: "Motores de bases de datos: OLTP vs OLAP"
 date: "2025-06-01 05:41:33 +0200"
-tags: ["Databases", "OLAP", "OLTP", "analytics"]
-post-cover: "/assets/img/posts/motores-de-bases-de-datos/cover.jpg"
+tags: ["bases de datos"]
 thumbnail-img: "/assets/img/posts/motores-de-bases-de-datos/cover.jpg"
 share-img: "/assets/img/posts/motores-de-bases-de-datos/cover.jpg"
 share-description: "Vamos a hablar de algo un poco más amplio: los motores de bases datos. Los podemos dividir en dos grandes categorías: OLTP y OLAP."
 share-title: "Motores de bases de datos: oltp vs olap"
 ---
+
 Hoy vamos a hablar de algo un poco más amplio: los motores de bases de datos. A grandes rasgos, los podemos dividir en dos grandes categorías:
 
-* **OLTP** (procesamiento de transacciones online): los que están **optimizados para procesar transacciones**.
-    
-* **OLAP** (procesamiento analítico online): los que están **optimizados para analíticas**.
-    
+- **OLTP** (procesamiento de transacciones online): los que están **optimizados para procesar transacciones**.
+- **OLAP** (procesamiento analítico online): los que están **optimizados para analíticas**.
 
 Y sí, los patrones de acceso a datos en uno y otro son muy diferentes.
 
@@ -23,12 +21,12 @@ Los sistemas OLTP suelen ser los que están de cara al usuario. Tienen que manej
 
 Aquí el cuello de botella suele estar en **el tiempo que tarda el disco en buscar el dato exacto**.
 
+<img src="{{ '/assets/img/posts/motores-de-bases-de-datos/cover.jpg' | relative_url }}" alt="Interior de un disco duro" style="max-width: 60%;">
+
 Dentro de este mundo OLTP hay dos formas comunes de organizar el almacenamiento:
 
-* **Estructura tipo log**: no se sobreescriben ficheros, solo se añaden. Luego se eliminan ficheros obsoletos. Ejemplos: **SSTables, LSM-trees, LevelDB, Cassandra, HBase, Lucene**...
-    
-* **Update-in-place**: se sobreescriben páginas concretas en disco. El ejemplo clásico: **B-trees**, usados en la mayoría de bases de datos relacionales y muchas no relacionales también.
-    
+- **Estructura tipo log**: no se sobreescriben ficheros, solo se añaden. Luego se eliminan ficheros obsoletos. Ejemplos: **SSTables, LSM-trees, LevelDB, Cassandra, HBase, Lucene**...
+- **Update-in-place**: se sobreescriben páginas concretas en disco. El ejemplo clásico: **B-trees**, usados en la mayoría de bases de datos relacionales y muchas no relacionales también.
 
 La ventaja de las estructuras tipo log es que convierten escrituras aleatorias en **escrituras secuenciales**, lo que es mucho más eficiente para escrituras en discos y SSDs. Por eso han ido ganando fama en los últimos años.
 
@@ -36,7 +34,7 @@ La ventaja de las estructuras tipo log es que convierten escrituras aleatorias e
 
 ## OLAP: lo que manejan los analistas
 
-Aquí ya no estamos hablando de miles de usuarios haciendo clics, sino de almacenes de datos o *warehouses* y otros sistemas de analíticas menos conocidos que utilizan los analistas de negocios. Los sistemas OLAP manejan muchas menos queries, pero cada una escanea millones de filas.
+Aquí ya no estamos hablando de miles de usuarios haciendo clics, sino de almacenes de datos o _warehouses_ y otros sistemas de analíticas menos conocidos que utilizan los analistas de negocios. Los sistemas OLAP manejan muchas menos queries, pero cada una escanea millones de filas.
 
 En estos casos el cuello de botella no es el tiempo de búsqueda, sino el **ancho de banda del disco**: cuántos datos puedes leer por segundo.
 
@@ -56,12 +54,12 @@ Y así quedaría comprimida utilizando **bitmap encoding** para una sola columna
 
 ## Tabla resumen
 
-| Característica | OLTP | OLAP |
-| --- | --- | --- |
-| Casos de uso | Apps de usuario, web, móviles | Análisis de negocio, reporting |
-| Nº de queries | Muy alto | Bajo |
-| Datos por query | Pocos registros | Millones de registros |
-| Patrón de acceso | Lectura por clave (índice) | Escaneo secuencial |
-| Cuello de botella | Latencia de búsqueda en disco | Ancho de banda de disco |
-| Almacenamiento recomendado | Por filas | Por columnas |
-| Ejemplos de motor | B-trees, LSM trees, LevelDB, PostgreSQL... | ClickHouse, Redshift, BigQuery, Snowflake... |
+| Característica             | OLTP                                       | OLAP                                         |
+| -------------------------- | ------------------------------------------ | -------------------------------------------- |
+| Casos de uso               | Apps de usuario, web, móviles              | Análisis de negocio, reporting               |
+| Nº de queries              | Muy alto                                   | Bajo                                         |
+| Datos por query            | Pocos registros                            | Millones de registros                        |
+| Patrón de acceso           | Lectura por clave (índice)                 | Escaneo secuencial                           |
+| Cuello de botella          | Latencia de búsqueda en disco              | Ancho de banda de disco                      |
+| Almacenamiento recomendado | Por filas                                  | Por columnas                                 |
+| Ejemplos de motor          | B-trees, LSM trees, LevelDB, PostgreSQL... | ClickHouse, Redshift, BigQuery, Snowflake... |

@@ -1,8 +1,7 @@
 ---
-title: "📚 Success through giving: lessons from \"Give and Take\""
+title: "Success through giving: lessons from \"Give and Take\""
 date: "2024-04-15 20:51:46 +0200"
-tags: ["books"]
-post-cover: "/assets/img/posts/give-and-take/cover.jpeg"
+tags: ["libros"]
 thumbnail-img: "/assets/img/posts/give-and-take/cover.jpeg"
 share-img: "/assets/img/posts/give-and-take/cover.jpeg"
 share-description: "Why did I read this book?\nRecently, my mentor in employment and work culture in Korea, Minhee Jung, recommended this book to me to better understand the ways in which we can make connections. At first, I was not sure if the content of the book would ..."
@@ -28,6 +27,8 @@ The main argument in the book is that in a networked world success depends on ho
 > "I'll sum up the key to success in one word: **generosity**," writes Keith Ferrazzi. "If your interactions are ruled by generosity, your rewards will follow suit."
 
 The main quality of givers that is described through the read of the whole book is **generosity.** This is the main characteristic of givers that make them what they are, being free in giving or sharing.
+
+<img src="{{ '/assets/img/posts/give-and-take/cover.jpeg' | relative_url }}" alt="Dos manos acercándose para ayudarse" style="max-width: 60%;">
 
 > Instead of aiming to succeed first and give back later, you might decide that giving first is a promising path to succeeding later.
 

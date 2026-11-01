@@ -2,7 +2,7 @@
 # --- Required options --- #
 ############################
 
-title: Las chorradas de Juanjo
+title: My stuffff
 author: Juanjo Requena
 
 # Final URL of the blog. baseurl is injected by the GitHub Pages workflow
@@ -18,24 +18,24 @@ locale: es
 ###############################################
 
 navbar-links:
-  Sobre mí: "me/"
-  Archivo: "archive/"
-  Etiquetas: "tags/"
-  juanjorequena.com: "https://juanjorequena.com"
+  Quién soy: "quien-soy/"
+  # Descomentar cuando haya más posts:
+  # Archivo: "archive/"
+  # Etiquetas: "tags/"
 
 ################
 # --- Logo --- #
 ################
 
-avatar: "/assets/img/avatar.png"
-round-avatar: true
+# Icono del nav desactivado; descomentar para volver a mostrarlo
+# avatar: "/assets/img/avatar.png"
+# round-avatar: true
 
 #####################################
 # --- Footer social media links --- #
 #####################################
 
 social-network-links:
-  rss: true
   github: wuaho
   linkedin: juanjorequena
 
@@ -46,9 +46,9 @@ rss-description: Unas veces hablo de ingeniería de software, otras de los libro
 ###########################
 
 share-links-active:
-  twitter: true
+  twitter: false
   facebook: false
-  linkedin: true
+  linkedin: false
   vk: false
   reddit: false
 
@@ -57,7 +57,8 @@ title-on-all-pages: true
 excerpt_length: 50
 feed_show_excerpt: true
 feed_show_tags: true
-post_search: true
+# Búsqueda desactivada; poner a true cuando haya más posts
+post_search: false
 edit_page_button: false
 navbar-var-length: false
 

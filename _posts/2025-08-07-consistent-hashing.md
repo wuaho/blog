@@ -1,35 +1,29 @@
 ---
-title: "⚖️¿Qué es Consistent Hashing?"
+title: "¿Qué es Consistent Hashing?"
 subtitle: "La técnica que utilizan Cassandra y DynamoDB para rebalancear datos en sistemas distribuidos"
 date: "2025-08-07 07:55:46 +0200"
-tags: ["consistent hashing", "rebalancing", "distributed system"]
-post-cover: "/assets/img/posts/consistent-hashing/cover.png"
+tags: ["sistemas distribuidos"]
 thumbnail-img: "/assets/img/posts/consistent-hashing/cover.png"
 share-img: "/assets/img/posts/consistent-hashing/cover.png"
 share-description: "Descubre el algoritmo de consistent hashing para redistribuir eficientemente la carga en sistemas distribuidos."
 share-title: "Que es el consistent hashing"
 ---
+
 ### Un poco de contexto
 
 Conforme pasa el tiempo, surgen problemas que afrontar en nuestra base de datos:
 
-* La cantidad de queries por segundo aumenta, con lo que necesitas añadir más CPUs para poder aguantar la carga.
-    
-* La cantidad de datos aumenta, con lo que necesitas añadir más almacenamiento en discos o RAM.
-    
-* Cuando un servidor falla y es necesario que otros servidores asuman sus responsabilidades. Para ello tendremos que mover todos esos datos y peticiones de un nodo a otro nuevo.
-    
+- La cantidad de queries por segundo aumenta, con lo que necesitas añadir más CPUs para poder aguantar la carga.
+- La cantidad de datos aumenta, con lo que necesitas añadir más almacenamiento en discos o RAM.
+- Cuando un servidor falla y es necesario que otros servidores asuman sus responsabilidades. Para ello tendremos que mover todos esos datos y peticiones de un nodo a otro nuevo.
 
 ➡️ **El proceso de mover toda esta carga de un nodo a otro dentro del clúster se conoce como rebalanceo.**
 
 No importa el esquema que hayas utilizado partición de la base de datos, hay una serie de requisitos mínimos que se buscan al hacer dicho rebalanceo:
 
-* Después del rebalanceo, la carga (datos, peticiones de lectura y escritura) debe de ser distribuida de manera equitativa entre los nodos del clúster.
-    
-* Mientras ocurre el rebalanceo, la base de datos debe de seguir aceptando peticiones de lectura y escritura.
-    
-* **No deberían de moverse más datos de los necesarios al realizar el balanceo. Así conseguiremos un rebalanceo más rápido y minimizaremos la carga por operaciones de E/S en disco y de red.**
-    
+- Después del rebalanceo, la carga (datos, peticiones de lectura y escritura) debe de ser distribuida de manera equitativa entre los nodos del clúster.
+- Mientras ocurre el rebalanceo, la base de datos debe de seguir aceptando peticiones de lectura y escritura.
+- **No deberían de moverse más datos de los necesarios al realizar el balanceo. Así conseguiremos un rebalanceo más rápido y minimizaremos la carga por operaciones de E/S en disco y de red.**
 
 Sabiendo que estas son las cualidades que se buscan para rebalancear, vamos ahora a introducir un ejemplo.
 
@@ -49,12 +43,9 @@ El método más simple sería calcular el módulo (%) del hash de la key. Por ej
 
 El algoritmo se vería tal que así:
 
-* Primero, cogemos el id de la entidad y lo pasamos por la función hash que tenemos, lo cual lo convierte a un número.
-    
-* Ahora, cogemos ese número y calculamos el módulo (%) según el número de nodos que tengamos en nuestra base de datos.
-    
-* El resultado nos indica donde guardar dicho dato.
-    
+- Primero, cogemos el id de la entidad y lo pasamos por la función hash que tenemos, lo cual lo convierte a un número.
+- Ahora, cogemos ese número y calculamos el módulo (%) según el número de nodos que tengamos en nuestra base de datos.
+- El resultado nos indica donde guardar dicho dato.
 
 Un ejemplo donde queremos calcular donde van 3 keys y tenemos 3 bases de datos sería:
 
@@ -89,22 +80,18 @@ Esta estrategia de balanceo es la que utilizan sistemas como Elasticsearch y Cou
 La última estrategia que vamos a presentar y en la que nos vamos a centrar se denomina **consistent hashing**. La clave principal es que vamos a distribuir nuestros datos y las bases de datos que disponemos en un anillo circular.
 
 1. Supongamos que, al aplicar el hashing a nuestras keys, los valores resultantes puede ir del 0 al 100.
-    
 
 ![]({{ '/assets/img/posts/consistent-hashing/21948f4d-b55f-49cf-8ad5-f7fd6c8e4cef.png' | relative_url }})
 
 2. Cuando ponemos dichos valores en un anillo circular, donde la posición final va justo antes de la primera posición, nos quedaría algo así.
-    
 
 ![]({{ '/assets/img/posts/consistent-hashing/15558848-0489-4d99-8716-3a49b8ddf192.png' | relative_url }})
 
 3. Ahora, distribuimos nuestros nodos de bases de datos a lo largo del anillo. Como tenemos 3 nodos, vamos a colocarlos en las posiciones 0, 33 y 66.
-    
 
 ![]({{ '/assets/img/posts/consistent-hashing/b157cf17-580a-43cd-b421-253f45f783fb.png' | relative_url }})
 
 4. Y finalmente, solo nos queda distribuir nuestros datos. Para saber en qué nodo van nuestros datos, tenemos que calcular el hash de dicho dato y, en vez de hacer el mod 3 de dicho resultado, buscaremos el valor de dicho hash en el anillo y nos movemos siguiendo el sentido de las agujas del reloj hasta que encontremos un nodo. Si tenemos una key = 115 y hash(115) = 93, el nodo donde irá dicho dato es la base de datos 1.
-    
 
 ![]({{ '/assets/img/posts/consistent-hashing/b750965f-317a-40cf-8634-a246fec66213.png' | relative_url }})
 
@@ -124,23 +111,17 @@ Y esa manera es:
 
 Los nodos virtuales (virtual nodes) son una extensión del consistent hashing que hace el sistema más resistente a distribuciones desequilibradas de datos en el anillo. La idea consiste en que cada base de datos va a ser representada por más de un nodo en el anillo. Esto lo podríamos conseguir con cualquiera de las siguientes 2 maneras:
 
-* Añadiendo un prefijo a la base de datos al calcular su hash. Así, sin nodos virtuales estábamos calculando hash(DB 1), pero ahora tendríamos que calcular hash(DB 1\_0), hash(DB 1\_1), hash(DB 1\_2), etc.
-    
-* Calcular la posición de los nodos de cada base de datos aplicando más de una función hash. Es decir, para saber la posición “\*\_0” utilizaríamos una función hash, para la posición “\*\_1” utilizaríamos otra función diferente y así.
-    
+- Añadiendo un prefijo a la base de datos al calcular su hash. Así, sin nodos virtuales estábamos calculando hash(DB 1), pero ahora tendríamos que calcular hash(DB 1_0), hash(DB 1_1), hash(DB 1_2), etc.
+- Calcular la posición de los nodos de cada base de datos aplicando más de una función hash. Es decir, para saber la posición “\*\_0” utilizaríamos una función hash, para la posición “\*\_1” utilizaríamos otra función diferente y así.
 
 ![]({{ '/assets/img/posts/consistent-hashing/08765a23-403b-4b4d-a901-a4a21864bd08.png' | relative_url }})
 
 En el caso de que la base de datos 4 falle:
 
-* Las keys en “BD 4\_1” serán distribuidas al nodo “2\_2” así que irán a la base de datos 2.
-    
-* Las keys en “BD 4\_3” serán distribuidas al nodo “3\_2” así que irán a la base de datos 3.
-    
-* Las keys en “BD 4\_2” serán distribuidas al nodo “1\_3” así que irán a la base de datos 1.
-    
-* Las keys en “BD 4\_0” serán distribuidas al nodo “1\_2” así que irán a la base de datos 1.
-    
+- Las keys en “BD 4_1” serán distribuidas al nodo “2_2” así que irán a la base de datos 2.
+- Las keys en “BD 4_3” serán distribuidas al nodo “3_2” así que irán a la base de datos 3.
+- Las keys en “BD 4_2” serán distribuidas al nodo “1_3” así que irán a la base de datos 1.
+- Las keys en “BD 4_0” serán distribuidas al nodo “1_2” así que irán a la base de datos 1.
 
 Como vemos, esto hace que la carga de una base de datos caída se distribuya de manera más equitativa entre los diferentes nodos físicos. Cuantos más nodos virtuales uses por base de datos, más uniforme será la redistribución de la carga.
 
@@ -152,10 +133,7 @@ Este algoritmo está integrado a día de hoy en tecnologías que utilizamos como
 
 ### Fuentes
 
-* [https://www.hellointerview.com/learn/system-design/deep-dives/consistent-hashing](https://www.hellointerview.com/learn/system-design/deep-dives/consistent-hashing)
-    
-* [Artur Ejsmont. *Web Scalability for Startup Engineers : Tips & Techniques for Scaling Your Web Application*. New York, Mcgraw-Hill Education, 2015.](https://www.goodreads.com/book/show/23615147-web-scalability-for-startup-engineers)
-    
-* [Xu, Alex. System Design Interview : An Insider’s Guide. 2020.](https://www.goodreads.com/book/show/54109255-system-design-interview-an-insider-s-guide)
-    
-* [Kleppmann, Martin. *Designing Data-Intensive Applications : The Big Ideas behind Reliable, Scalable, and Maintainable Systems*. Sebastopol, CA, O’Reilly Media, 2017.](https://www.goodreads.com/book/show/23463279-designing-data-intensive-applications)
+- [https://www.hellointerview.com/learn/system-design/deep-dives/consistent-hashing](https://www.hellointerview.com/learn/system-design/deep-dives/consistent-hashing)
+- [Artur Ejsmont. _Web Scalability for Startup Engineers : Tips & Techniques for Scaling Your Web Application_. New York, Mcgraw-Hill Education, 2015.](https://www.goodreads.com/book/show/23615147-web-scalability-for-startup-engineers)
+- [Xu, Alex. System Design Interview : An Insider’s Guide. 2020.](https://www.goodreads.com/book/show/54109255-system-design-interview-an-insider-s-guide)
+- [Kleppmann, Martin. _Designing Data-Intensive Applications : The Big Ideas behind Reliable, Scalable, and Maintainable Systems_. Sebastopol, CA, O’Reilly Media, 2017.](https://www.goodreads.com/book/show/23463279-designing-data-intensive-applications)

@@ -1,8 +1,7 @@
 ---
-title: "📚 The ABCs of NoSQL: lessons from \"NoSQL Distilled\""
+title: "The ABCs of NoSQL: lessons from \"NoSQL Distilled\""
 date: "2024-09-21 07:43:53 +0200"
-tags: ["Databases", "NoSQL"]
-post-cover: "/assets/img/posts/nosql-distilled/cover.jpeg"
+tags: ["bases de datos", "libros"]
 thumbnail-img: "/assets/img/posts/nosql-distilled/cover.jpeg"
 share-img: "/assets/img/posts/nosql-distilled/cover.jpeg"
 share-description: "Why did I read this book?\nSome time ago, I asked my first manager as a software engineer, Andrea Carrozo, to recommend me some books to healp me learn more about databases. Andrea immediately suggested NoSQL Distilled: A Brief Guide to the Emerging W..."
