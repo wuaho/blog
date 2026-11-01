@@ -18,7 +18,7 @@ locale: es
 ###############################################
 
 navbar-links:
-  Quién soy: "quien-soy/"
+  Sobre mí: "sobre-mi/"
   # Descomentar cuando haya más posts:
   # Archivo: "archive/"
   # Etiquetas: "tags/"

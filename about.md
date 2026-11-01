@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Quién soy
-permalink: /quien-soy/
+title: Sobre mí
+permalink: /sobre-mi/
 ---
 
 ¡hola! soy juanjo, ingeniero de software en Glovo (Barcelona). yo...
