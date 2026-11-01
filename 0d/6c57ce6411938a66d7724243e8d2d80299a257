@@ -1,0 +1,28 @@
+_posts/2024-04-15-give-and-take.md
+  s_6a18da6c1a47cd::t_eec8f18bc8cb64 5
+  h_c567f17f6019ce 2,10-12,15
+  s_6a18da6c1a47cd::t_fc760915ba0e55 96,128
+_layouts/home.html
+  s_6a18da6c1a47cd::t_3a1670ab6da46e 33-41,43-50
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "0d6c57ce6411938a66d7724243e8d2d80299a257",
+  "prompts": {},
+  "humans": {
+    "h_c567f17f6019ce": {
+      "author": "wuaho <juanjoserequenalama@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_6a18da6c1a47cd": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7bdf271b-69b7-4a6b-a60e-5405ec69e365",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "wuaho <juanjoserequenalama@gmail.com>"
+    }
+  }
+}
