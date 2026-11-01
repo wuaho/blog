@@ -21,7 +21,7 @@ Los sistemas OLTP suelen ser los que están de cara al usuario. Tienen que manej
 
 Aquí el cuello de botella suele estar en **el tiempo que tarda el disco en buscar el dato exacto**.
 
-<img src="{{ '/assets/img/posts/motores-de-bases-de-datos/cover.jpg' | relative_url }}" alt="Interior de un disco duro" style="max-width: 60%;">
+<!-- <img src="{{ '/assets/img/posts/motores-de-bases-de-datos/cover.jpg' | relative_url }}" alt="Interior de un disco duro" style="max-width: 60%;"> -->
 
 Dentro de este mundo OLTP hay dos formas comunes de organizar el almacenamiento:
 

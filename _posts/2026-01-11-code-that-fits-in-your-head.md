@@ -1,13 +1,11 @@
 ---
-title: "Hacer software es como… > Lecciones de Code That Fits In Your Head"
+title: "Hacer software es como…  Lecciones de 'Code That Fits In Your Head'"
 date: "2026-01-11 15:29:19 +0100"
 tags: ["ingeniería de software", "libros"]
 thumbnail-img: "/assets/img/posts/code-that-fits-in-your-head/cover.jpeg"
 share-img: "/assets/img/posts/code-that-fits-in-your-head/cover.jpeg"
 share-description: '¿Puede tu código caber en tu cabeza? Mis notas sobre "Code That Fits in Your Head": por qué el software no es como construir una casa ni cuidar un jardín'
 ---
-
-## ¿Por qué he leído este libro?
 
 Poco antes de terminar 2025, alcancé la cifra de 14 libros leídos, de los cuales 4 eran de desarrollo de software. Casi todos se centraban en arquitectura y diseño de alto nivel, así que buscaba algo más práctico a la hora de escribir código y con una perspectiva reciente.
 
@@ -26,6 +24,7 @@ El libro comienza rompiendo mitos sobre qué es realmente el desarrollo de softw
 - ⭐ **Hacer software no es ni como construir una casa ni cuidar un jardín:** Cuando la gente compara hacer software con construir una casa o cuidar un jardín, esas metáforas son muy lejanas a la realidad. La industria del desarrollo del software no se asemeja a ninguna disciplina en la ingeniería. Aún no tenemos metodologías replicables que puedan ofrecer resultados de manera consistente.
 
   <img src="{{ '/assets/img/posts/code-that-fits-in-your-head/cover.jpeg' | relative_url }}" alt="Unas tijeras podando un arbusto" style="max-width: 60%;">
+
 - ⭐ “**A mí me funciona cuando hago las cosas así”:** En el desarrollo de software actual, el 'cada maestro tiene su librillo' se ha convertido en una excusa para el subjetivismo. A diferencia de otras ingenierías, parecemos atrapados en un ciclo de experiencias individuales y contextos aislados. Este libro nace para buscar las leyes fundamentales que rigen nuestra disciplina, transformando la intuición personal en una ingeniería basada en principios (en lo que sea posible).
 - **_El futuro ya está aquí, solo que no está distribuido de manera uniforme:_** Hay unas pocas empresas que están haciendo muy buen software y la mayoría, que siguen haciendo churros.
 - 📝 **Warnings como errores:** Trata los warnings del linter o compilador como errores. Al principio frustra, pero mejora radicalmente la calidad de tu código y te hace mejor programador.
@@ -91,8 +90,7 @@ Uno de los pilares del libro es la **legibilidad** y **sostenibilidad de tu cód
   - A ser posible, reemplaza un comentario con un método con un nombre que sea útil.
   - Al igual que los comentarios se vuelven obsoletos rápidamente, también lo hacen los nombres de los métodos. Cuando modifiques la implementación de un método, no olvides actualizar el nombre si es necesario.
 - ⭐️ **No digas algo con el nombre de un método cuando lo puedes decir con el tipado:** Los nombres de los métodos son útiles pero no tienes que repetir lo que ya te dice el tipado del método.
-  - - `getReservationOrNull(): Reservation?` ❌
-          * `getReservation(): Reservation?` ✅
+  - - `getReservationOrNull(): Reservation?` ❌ \* `getReservation(): Reservation?` ✅
 
 - ️⭐️ **Hay casos en los que un buen nombre de un método no va a ser suficiente para comunicar toda la intención**
   - **Utiliza comentarios** si quieres incluir por qué has decidido implementar el código de una forma en concreto.

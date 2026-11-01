@@ -4,13 +4,12 @@ title: Sobre mí
 permalink: /sobre-mi/
 ---
 
-¡hola! soy juanjo, ingeniero de software en Glovo (Barcelona). yo...
+¡hola! soy juanjo, ingeniero de software que trabaja para Glovo aquí en Barcelona.
+Me dedico a:
 
-* escribo código backend
-* convierto ideas de producto en soluciones de arquitectura
-* escribo en este blog sobre cosas random que me parecen interesantes
-* intento cocinar bien en casa. los resultados pueden variar
+- programar código backend
+- escribir en este blog sobre chorradas que me parecen interesantes
+- cocinar recetas bien ricas, para tener algo de lo que vivir por si me quedo sin trabajo por la IA
 
-¿quieres trabajar conmigo? escríbeme a [juanjorek@gmail.com](mailto:juanjorek@gmail.com) :)
-
-También me encuentras en [LinkedIn](https://www.linkedin.com/in/juanjorequena/) y en [X](https://x.com/wuaho22).
+No sé por qué querrías contactar conmigo pero por si es el caso escríbeme a [juanjorek@gmail.com](mailto:juanjorek@gmail.com)
+o envíame un mensaje por [LinkedIn](https://www.linkedin.com/in/juanjorequena/).
