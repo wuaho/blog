@@ -1,0 +1,23 @@
+_layouts/home.html
+  s_6a18da6c1a47cd::t_0ed40e100a0dd6 15-21
+_posts/2024-04-15-give-and-take.md
+  s_6a18da6c1a47cd::t_848c88b6e163f7 5
+assets/css/custom.css
+  s_6a18da6c1a47cd::t_848c88b6e163f7 47-60
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "1b667383a3f1cca71decb41ff5fbae03f96c5fd5",
+  "prompts": {},
+  "sessions": {
+    "s_6a18da6c1a47cd": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7bdf271b-69b7-4a6b-a60e-5405ec69e365",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "wuaho <juanjoserequenalama@gmail.com>"
+    }
+  }
+}
