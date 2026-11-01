@@ -12,6 +12,13 @@ layout: page
   <li class="post-preview">
     <article>
 
+      {%- comment -%} Banner solo en los posts con `show-preview: true` {%- endcomment -%}
+      {% if post.show-preview and post.thumbnail-img %}
+      <a class="post-banner" href="{{ post.url | absolute_url }}" aria-label="{{ post.title | strip_html | escape }}">
+        <img src="{{ post.thumbnail-img | absolute_url }}" alt="">
+      </a>
+      {% endif %}
+
       <a href="{{ post.url | absolute_url }}">
         <h2 class="post-title">{{ post.title | strip_html }}</h2>
 
@@ -30,24 +37,7 @@ layout: page
         Publicado el {{ post.date | date: date_format }}
       </p>
 
-      {%- comment -%} Preview solo en los posts con `show-preview: true` {%- endcomment -%}
-      {% if post.show-preview and post.thumbnail-img %}
-      <div class="post-image post-image-small">
-        <a href="{{ post.url | absolute_url }}" aria-label="Thumbnail">
-          <img src="{{ post.thumbnail-img | absolute_url }}" alt="Post thumbnail">
-        </a>
-      </div>
-      {% endif %}
-
       {% unless site.feed_show_excerpt == false %}
-      {% if post.show-preview and post.thumbnail-img %}
-      <div class="post-image post-image-short">
-        <a href="{{ post.url | absolute_url }}" aria-label="Thumbnail">
-          <img src="{{ post.thumbnail-img | absolute_url }}" alt="Post thumbnail">
-        </a>
-      </div>
-      {% endif %}
-
       <div class="post-entry">
         {% assign excerpt_length = site.excerpt_length | default: 50 %}
         {{ post.excerpt | strip_html | truncatewords: excerpt_length }}

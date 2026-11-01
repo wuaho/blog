@@ -2,13 +2,12 @@
 title: 'Success through giving: lessons from "Give and Take"'
 date: "2024-04-15 20:51:46 +0200"
 tags: ["libros"]
+post-cover: "/assets/img/posts/give-and-take/cover.jpeg"
 show-preview: true
 thumbnail-img: "/assets/img/posts/give-and-take/cover.jpeg"
 share-img: "/assets/img/posts/give-and-take/cover.jpeg"
 share-description: "Why did I read this book?\nRecently, my mentor in employment and work culture in Korea, Minhee Jung, recommended this book to me to better understand the ways in which we can make connections. At first, I was not sure if the content of the book would ..."
 ---
-
-<img src="{{ '/assets/img/posts/give-and-take/cover.jpeg' | relative_url }}" alt="Dos manos acercándose para ayudarse" style="max-width: 100%;">
 
 ## Why did I read this book?
 
