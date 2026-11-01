@@ -1,0 +1,20 @@
+_posts/2026-01-11-code-that-fits-in-your-head.md
+  h_c567f17f6019ce 2,27,93
+index.html
+  h_c567f17f6019ce 5
+about.md
+  h_c567f17f6019ce 7-8,10-12,14-15
+_posts/2025-06-01-motores-de-bases-de-datos.md
+  h_c567f17f6019ce 24
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "8a888709a0089f4702e41863604824612ca35083",
+  "prompts": {},
+  "humans": {
+    "h_c567f17f6019ce": {
+      "author": "wuaho <juanjoserequenalama@gmail.com>"
+    }
+  }
+}
