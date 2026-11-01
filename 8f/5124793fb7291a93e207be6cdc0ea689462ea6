@@ -1,0 +1,24 @@
+_config.yml
+  s_6a18da6c1a47cd::t_6096bbfc0fd1bc 30-31
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "8f5124793fb7291a93e207be6cdc0ea689462ea6",
+  "prompts": {},
+  "humans": {
+    "h_c567f17f6019ce": {
+      "author": "wuaho <juanjoserequenalama@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_6a18da6c1a47cd": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7bdf271b-69b7-4a6b-a60e-5405ec69e365",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "wuaho <juanjoserequenalama@gmail.com>"
+    }
+  }
+}
