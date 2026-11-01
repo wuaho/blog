@@ -1,0 +1,84 @@
+_posts/2026-01-11-code-that-fits-in-your-head.md
+  s_6a18da6c1a47cd::t_5bb608fd9f9bbe 2
+  s_6a18da6c1a47cd::t_aad0a0f5728030 4
+  h_c567f17f6019ce 7,9,26,29-31,39-42,48-53,59-72,78-83,89-94,96-102,108-112,121-124,130-136,142-147,152-153,159,161-168,174-180,186-192,198-202,210-212
+  s_6a18da6c1a47cd::t_261dbfd0d1089d 27-28
+  s_6a18da6c1a47cd::t_d307c6e44c4bba 95,148-151,160
+about.md
+  s_6a18da6c1a47cd::t_53185c4fe2b510 3-4,7,9-16
+  s_6a18da6c1a47cd::t_34874b16e6568d 1-2,5-6,8
+index.html
+  s_6a18da6c1a47cd::t_6048740f9da21f 4-5
+_config.yml
+  s_6a18da6c1a47cd::t_838c5f9dd8912b 5
+  s_6a18da6c1a47cd::t_b202eecf77eef8 49,51
+  s_6a18da6c1a47cd::t_17610ba6ed1825 30-32
+  s_6a18da6c1a47cd::t_b23c83a5ea0d0d 60-61
+  s_6a18da6c1a47cd::t_451ec788f65b02 21
+  s_6a18da6c1a47cd::t_34a1ada27fe4d6 22-24
+_posts/2024-03-28-me.md
+  s_6a18da6c1a47cd::t_aad0a0f5728030 4
+_layouts/home.html
+  s_6a18da6c1a47cd::t_6c6991919adf49 51
+_posts/2024-04-15-give-and-take.md
+  s_6a18da6c1a47cd::t_5bb608fd9f9bbe 2
+  s_6a18da6c1a47cd::t_261dbfd0d1089d 31
+  s_6a18da6c1a47cd::t_aad0a0f5728030 4
+  s_6a18da6c1a47cd::t_8ba061af379d4f 32
+_posts/2025-06-01-motores-de-bases-de-datos.md
+  s_6a18da6c1a47cd::t_5bb608fd9f9bbe 2
+  s_6a18da6c1a47cd::t_aad0a0f5728030 4
+  s_6a18da6c1a47cd::t_261dbfd0d1089d 24
+  h_c567f17f6019ce 10,13-14,28-29,37,58
+  s_6a18da6c1a47cd::t_7280cc91821de7 25,57,59-65
+_posts/2025-05-30-bases-de-datos.md
+  s_6a18da6c1a47cd::t_5bb608fd9f9bbe 2
+  s_6a18da6c1a47cd::t_aad0a0f5728030 4
+  h_c567f17f6019ce 10,13,21,23,29-30,38,40,49,57-59,63-65
+  s_6a18da6c1a47cd::t_103da698865660 48,50-53
+_layouts/post.html
+  s_6a18da6c1a47cd::t_a04c9f8d4d4d48 53
+_posts/2025-08-07-consistent-hashing.md
+  h_c567f17f6019ce 11,16-18,24-26,46-48,114-115,121-124,136-139
+  s_6a18da6c1a47cd::t_5bb608fd9f9bbe 2
+  s_6a18da6c1a47cd::t_aad0a0f5728030 5
+tags.html
+  s_6a18da6c1a47cd::t_046e4bec085b79 17
+  s_6a18da6c1a47cd::t_bc8db030ded59c 22
+_posts/2025-08-21-acid.md
+  s_6a18da6c1a47cd::t_aad0a0f5728030 5
+  s_6a18da6c1a47cd::t_5bb608fd9f9bbe 2,9
+  h_c567f17f6019ce 11,61-64,70-71,104-107,115-118,124-125
+  s_6a18da6c1a47cd::t_261dbfd0d1089d 16
+  s_6a18da6c1a47cd::t_57aec96aa59db1 18,36,92
+  s_6a18da6c1a47cd::t_8d0209c95c7cfd 17,72
+_posts/2024-09-21-nosql-distilled.md
+  s_6a18da6c1a47cd::t_aad0a0f5728030 4
+  s_6a18da6c1a47cd::t_5bb608fd9f9bbe 2
+_posts/2025-08-01-cap.md
+  s_6a18da6c1a47cd::t_261dbfd0d1089d 16-17
+  h_c567f17f6019ce 10,13-15,61-62,74-76,80-82,92-94
+  s_6a18da6c1a47cd::t_aad0a0f5728030 4
+  s_6a18da6c1a47cd::t_5bb608fd9f9bbe 2
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "36f0ab9977cbaf41aff288d0c0fe367b901ffbf2",
+  "prompts": {},
+  "humans": {
+    "h_c567f17f6019ce": {
+      "author": "wuaho <juanjoserequenalama@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_6a18da6c1a47cd": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7bdf271b-69b7-4a6b-a60e-5405ec69e365",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "wuaho <juanjoserequenalama@gmail.com>"
+    }
+  }
+}
